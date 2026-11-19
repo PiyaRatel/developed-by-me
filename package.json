@@ -1,0 +1,41 @@
+{
+  "name": "developed-by-me",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "tokens": "node scripts/build-tokens.mjs",
+    "predev": "npm run tokens",
+    "prebuild": "npm run tokens",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint:css": "stylelint \"app/**/*.css\" \"components/**/*.css\"",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "mcp": "node mcp-server/index.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.10.0",
+    "@dnd-kit/core": "^6.3.1",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "axe-core": "^4.14.1",
+    "class-variance-authority": "^0.7.1",
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "stylelint": "^18.0.0",
+    "stylelint-declaration-strict-value": "^1.13.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  }
+}

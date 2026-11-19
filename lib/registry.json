@@ -1,0 +1,15 @@
+{
+  "components": [
+    { "name": "Stack", "description": "Vertical layout with token spacing.", "props": { "gap": ["space-3", "space-4", "space-5"] }, "tokens": ["space-3", "space-4", "space-5"] },
+    { "name": "EmptyState", "description": "Explains why a view is empty and offers one next step.", "props": { "title": "string<=40", "body": "string<=120", "icon": ["inbox", "pause", "search"] }, "tokens": ["color-surface-2", "radius-l", "space-5"] },
+    { "name": "Button", "description": "An action. Primary or secondary.", "props": { "label": "string<=20", "variant": ["primary", "secondary"] }, "tokens": ["button-bg", "button-fg", "button-radius"] },
+    { "name": "Badge", "description": "A short status label with an icon.", "props": { "label": "string<=16", "tone": ["neutral", "ok", "warn"] }, "tokens": ["color-surface-2", "color-text"] },
+    { "name": "Text", "description": "Body or muted copy.", "props": { "text": "string<=140", "tone": ["default", "muted"] }, "tokens": ["color-text", "color-text-muted"] }
+  ],
+  "usageRules": [
+    "An EmptyState has exactly one primary Button.",
+    "Status uses a Badge with an icon, never colour alone.",
+    "Canceled or paused states use tone 'neutral', not 'warn'. Nothing is broken.",
+    "Copy never blames the user."
+  ]
+}
